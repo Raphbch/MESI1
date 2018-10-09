@@ -13,7 +13,7 @@
                 <div class="panel-heading">
                     <h1>Inscription</h1>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" id="bodyform">
                    <label for="Pseudo">Entrez votre pseudo :</label>
                    <input class="form-control" name="Pseudo" id="Pseudo" type="text">
                    <label for="MotDePasse1">Entrez votre mot de passe :</label>
@@ -24,13 +24,13 @@
                    <input class="form-control" name="Email" id="Email" type="email">
                    <input type="submit" class="btn btn-primary btn-block" name="Valider" value="Valider">
                 </div>
-                <div class="panel-footer">
+                <div class="panel-footer" id="resultaffiche">
                   
                 </div>
             </div>
         </form>
         <?php
-            if(($_POST['Valider'])== 'Valider')
+            if(isset($_POST['Valider']))
             {
                 if(($_POST['Pseudo'] != "")&&($_POST['Email'] != "")&&($_POST['MotDePasse1'] != "")&&($_POST['MotDePasse2'] != ""))
                 {
@@ -49,13 +49,21 @@
                             //On créé la requête
                             $sql = "INSERT INTO utilisateur(Pseudo,MotDePasse,Email) VALUES ('".$_POST['Pseudo']."','".$_POST['MotDePasse1']."','".$_POST['Email']."')";
                             /* execute et affiche l'erreur mysql si elle se produit */
-                            echo($sql);
+                            
                             if (!$c->query($sql))
                             {
                                 printf("Message d'erreur : %s\n", $c->error);
                             }
                         // on ferme la connexion
-                        mysqli_close($c); 
+                        mysqli_close($c);
+                        ?>
+                        
+                            <script>
+                                document.getElementById("bodyform").style.display = "none";
+                                document.getElementById("resultaffiche").innerHTML="<div style='text-align:center;'>Compte correctement créé ! <br> <a href='../index.php'>Retour à l'accueil</a></div>";
+                            </script>
+                        
+                        <?php
                         }
                         else echo "Les mots de passe ne sont pas identiques";
                     }
@@ -65,5 +73,6 @@
             }
             ?>
     </div>
+    <script src="../js/inscription.js"></script>
 </body>
 </html>
