@@ -1,0 +1,16 @@
+html{
+    margin-top: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+.panel{
+    width: 500px;
+    margin: auto;
+}
