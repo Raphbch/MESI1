@@ -14,3 +14,7 @@ input{
     width: 500px;
     margin: auto;
 }
+
+#Message{
+    text-align: center;
+}

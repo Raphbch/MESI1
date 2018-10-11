@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Connecté</h1>
+
+    <?php
+        session_start();
+        echo $_SESSION['idutilisateur'] ;
+        echo $_SESSION['pseudo'] ;
+    ?>
 </body>
 </html>

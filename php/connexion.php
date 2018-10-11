@@ -11,21 +11,20 @@
         <form method="post" action="connexion.php" >
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h1>Connexion</h1>
+                <a href="../index.php" class="btn btn-info btn-sm">
+                <span class="glyphicon glyphicon-home"></span> Accueil
+                </a>
+                <h1>Connexion</h1>
                 </div>
                 <div class="panel-body" id="bodyform">
                    <label for="Pseudo">Entrez votre pseudo :</label>
-                   <input class="form-control" name="Pseudo" id="Pseudo" type="text">
+                   <input class="form-control" name="Pseudo" id="Pseudo" type="text"  required>
                    <label for="MotDePasse">Entrez votre mot de passe :</label>
-                   <input class="form-control" name="MotDePasse" id="MotDePasse" type="password">
+                   <input class="form-control" name="MotDePasse" id="MotDePasse" type="password" required>
                    <input type="submit" class="btn btn-primary btn-block" name="Valider" value="Valider">
                 </div>
                 <div class="panel-footer" id="resultaffiche">
-                  
-                </div>
-            </div>
-        </form>
-        <?php
+                <?php
             if(isset($_POST['Valider']))
             {
                 if(isset($_POST['Pseudo'])){
@@ -44,32 +43,37 @@
                             $MdpHash = $row['motdepasse'];
                             $IdUser = $row['idutilisateur'];
                         }
+
+                        if (!$result)
+                        {
+                            echo("<div class='text-danger' style='text-align:center;'>Identifiant ou Mot de Passe incorrect</a></div>");          
+                        }
+                        else
+                        {
+                            if (password_verify($Mdp, $MdpHash)) {
+                                session_start();
+                                $_SESSION['idutilisateur'] = $IdUser;
+                                $_SESSION['pseudo'] = $Pseudo;
+                                header('Location: testprofil.php');
+                            }
+                            else {
+                                echo("<div class='text-danger' style='text-align:center;'>Identifiant ou Mot de Passe incorrect</a></div>");          
+                            }
+                        }
                     } else {
-                        echo "0 results";
+                        echo("<div class='text-danger' style='text-align:center;'>Identifiant ou Mot de Passe incorrect</a></div>");          
                     }
                     
 
-                    if (!$result)
-                    {
-                        echo 'Mauvais identifiant ou mot de passe !';
-                    }
-                    else
-                    {
-                        if (password_verify($Mdp, $MdpHash)) {
-                            session_start();
-                            $_SESSION['idutilisateur'] = $IdUser;
-                            $_SESSION['pseudo'] = $Pseudo;
-                            header('Location: testprofil.php');
-                        }
-                        else {
-                            echo 'Mauvais identifiant ou mot de passe !';
-                        }
-                    }
+                    
                     mysqli_close($bdd);
                 }
             }
             ?>
+                </div>
+            </div>
+        </form>
+       
     </div>
-    <script src="../js/inscription.js"></script>
 </body>
 </html>
