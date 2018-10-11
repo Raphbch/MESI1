@@ -20,17 +20,8 @@
                    <label for="Quizname">Nom du quiz :</label>
                    <input class="form-control" name="Quizname" id="Quizname" type="text" pattern=".{6,}"  required>
                    <label for="Nbquestion">Nombre de question (5 à 10)</label>
-                   <input class="form-control" name="Nbquestion" id="Nbquestion" type="number" min="5" max="10" required >
-                   <?php
-                   if(isset($_POST['Nbquestion']))
-                   {
-                    echo '<input type="hidden" name="Nbquestion" id="Nbquestion" value="'.$_POST['Nbquestion'].'">';
-                   }
-                   if(isset($_POST['Quizname']))
-                   {
-                    echo '<input type="hidden" name="Quizname" id="Quizname" value="'.$_POST['Quizname'].'">';
-                   }
-                    ?>
+                   <input class="form-control" name="Nbquestion" id="Nbquestion" type="number" min="1" max="10" required >
+                   
                    <input type="submit" class="btn btn-primary btn-block" name="Suivant" value="Suivant">
                    
                 </div>
@@ -41,8 +32,10 @@
         <?php
             if(isset($_POST['Suivant']))
             {
+                
                 $date = date("Y-m-d H:i:s");
                 $Quizname = $_POST['Quizname'];
+                $idQuiz;
                 date_default_timezone_set('UTC');
                 $bdd = new mysqli ("localhost","root","","quizeco"); 
                 //On créé la requête
@@ -51,23 +44,28 @@
                 
                 if ($bdd->query($sql))
                 {
-                    echo("<div class='text-success' style='text-align:center;'>Compte correctement créé ! <br> <a href='../index.php'>Retour à l'accueil</a></div>");          
+                    
+                    header('Location: questioncreator.php');
+
                 }
                 else
                 {
-                    echo("<div class='text-danger' style='text-align:center;'>Ce Pseudo existe déjà.<br> Veuillez en choisir un autre</div>");
+                    echo("<div class='text-danger' style='text-align:center;'>Ce titre existe déjà.<br> Veuillez en choisir un autre</div>");
 
                 }
                 
-                $result = $bdd->query("SELECT idquiz FROM quiz WHERE pseudo = '".$Pseudo."'");
+                $result = $bdd->query("SELECT idquiz FROM quiz WHERE titre = '".$Quizname."'");
                     
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        $MdpHash = $row['motdepasse'];
-                        $IdUser = $row['idutilisateur'];
+                        $idQuiz = $row['idquiz'];
                     }
                 }
+                session_start();
+                $_SESSION['Quizname'] = $Quizname;
+                $_SESSION['idQuiz'] = $idQuiz;
+                $_SESSION['Nbquestion'] = $_POST['Nbquestion'];
             // on ferme la connexion
             mysqli_close($bdd);
 
