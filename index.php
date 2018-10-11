@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <h1>Quizéco</h1>
-    <button><a href="#">Se connecter</a></button>
+    <button><a href="php/connexion.php">Se connecter</a></button>
     <button><a href="php/inscription.php">S'inscrire</a></button>
 </div>
 </body>

@@ -45,17 +45,18 @@
                         if ($password==$repeatpassword)
                         {
                             // on se connecte à MySQL et on sélectionne la base
-                            $c = new mysqli ("localhost","root","","quizeco"); 
+                            $bdd = new mysqli ("localhost","root","","quizeco"); 
+                            $pass_hache = password_hash($password, PASSWORD_DEFAULT);
                             //On créé la requête
-                            $sql = "INSERT INTO utilisateur(Pseudo,MotDePasse,Email) VALUES ('".$_POST['Pseudo']."','".$_POST['MotDePasse1']."','".$_POST['Email']."')";
+                            $sql = "INSERT INTO utilisateur(Pseudo,MotDePasse,Email) VALUES ('".$pseudo."','".$pass_hache."','".$email."')";
                             /* execute et affiche l'erreur mysql si elle se produit */
                             
-                            if (!$c->query($sql))
+                            if (!$bdd->query($sql))
                             {
-                                printf("Message d'erreur : %s\n", $c->error);
+                                printf("Message d'erreur : %s\n", $bdd->error);
                             }
                         // on ferme la connexion
-                        mysqli_close($c);
+                        mysqli_close($bdd);
                         ?>
                         
                             <script>
