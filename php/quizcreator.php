@@ -34,11 +34,12 @@
             {
                 
                 $date = date("Y-m-d H:i:s");
-                $Quizname = $_POST['Quizname'];
+                $Quizname = addslashes($_POST['Quizname']);
                 $idQuiz;
                 date_default_timezone_set('UTC');
                 $bdd = new mysqli ("localhost","root","","quizeco"); 
                 //On créé la requête
+                mysqli_set_charset($bdd,"utf8");
                 $sql = "INSERT INTO quiz(titre,DateOn) VALUES ('".$Quizname."','". $date ."')";
                 /* execute et affiche l'erreur mysql si elle se produit */
                 
