@@ -1,7 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['idutilisateur']))
-{
+if (!isset($_SESSION['idutilisateur'])) {
     header('location: ../index.php');
 }
 $privilege;
@@ -89,7 +88,7 @@ if ($privilege == "Admin") {
                                                     
                             <div class=\"btn-group\">
                             <div class=\"btn-group-vertical\">
-                            <a href=\"quizaffiche.php?id=".$idquiznotvalid[$i]."\"><button type=\"button\" class=\"btn btn-primary\">" . $titlequiznotvalid[$i] . "</button></a>
+                            <a href=\"quizaffiche.php?id=" . $idquiznotvalid[$i] . "\"><button type=\"button\" class=\"btn btn-primary\">" . $titlequiznotvalid[$i] . "</button></a>
                             <button class='Valider btn btn-success' id='Valider_" . $idquiznotvalid[$i] . "' value='" . $idquiznotvalid[$i] . "'>Valider</button>
                             <button class='Refuser btn btn-danger' id='Refuser_" . $idquiznotvalid[$i] . "' value='" . $idquiznotvalid[$i] . "'>Refuser</button>
                             </div>
@@ -136,7 +135,7 @@ if ($privilege == "Admin") {
                                                     
                             <div class=\"btn-group\">
                             <div class=\"btn-group-vertical\">
-                            <a href=\"quizaffiche.php?id=".$idquizresearch[$i]."\"><button type=\"button\" class=\"btn btn-primary\">" . $titlequizresearch[$i] . "</button></a>
+                            <a href=\"quizaffiche.php?id=" . $idquizresearch[$i] . "\"><button type=\"button\" class=\"btn btn-primary\">" . $titlequizresearch[$i] . "</button></a>
                             <button href=\"#\" class='Refuser btn btn-danger' id='Refuser_" . $idquizresearch[$i] . "' value='" . $idquizresearch[$i] . "'>Supprimer</button>
                             </div>
                         </div>";
@@ -158,7 +157,7 @@ if ($privilege == "Admin") {
     echo "<br>Pseudo : ", $pseudo;
     echo "<br>Privilege :", $privilege;
     echo "<br>Reponse : ", $nbbonnerep;
-    echo "<br>Quizz complete :", $quizcomplete;
+    echo "<br>Quiz complete :", $quizcomplete;
     echo "<br><a href='quizcreator.php'>Create quiz</a>";
 }
 ?>
