@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73e4c6cc-9715-4226-b514-fefed2e1842e" name="Default Changelist" comment="commit phpstorm2">
-      <change afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/profil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/deconnexion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/supprimerquiz.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/validatequiz.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/quizaffiche.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/quizaffiche.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/sendScore.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/profil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profil.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connexion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/questioncreator.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/questioncreator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/quizcreator.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/quizcreator.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,20 +35,20 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
+          <entry key="CSS" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="3" />
+          <entry key="JavaScript" value="5" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="20" />
+          <entry key="PHP" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="17" />
+          <entry key="css" value="129" />
           <entry key="dummy" value="7" />
           <entry key="html" value="23" />
-          <entry key="js" value="399" />
-          <entry key="php" value="2655" />
+          <entry key="js" value="1259" />
+          <entry key="php" value="3992" />
           <entry key="txt" value="18" />
         </counts>
       </usages-collector>
@@ -60,19 +57,19 @@
       <usages-collector id="statistics.php.composer.actions" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
+          <entry key="css" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="3" />
+          <entry key="js" value="5" />
           <entry key="md" value="1" />
-          <entry key="php" value="20" />
+          <entry key="php" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="17" />
+          <entry key="CSS" value="129" />
           <entry key="HTML" value="80" />
-          <entry key="JavaScript" value="399" />
-          <entry key="PHP" value="2598" />
+          <entry key="JavaScript" value="1259" />
+          <entry key="PHP" value="3935" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
@@ -82,9 +79,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/quizaffiche.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/quizaffiche.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/profil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/sendScore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="112" selection-start-line="6" selection-start-column="112" selection-end-line="6" selection-end-column="112" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -116,16 +149,19 @@
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php/questioncreatorOk.php" />
-        <option value="$PROJECT_DIR$/css/profil.css" />
         <option value="$PROJECT_DIR$/php/supprimerquiz.php" />
         <option value="$PROJECT_DIR$/php/validatequiz.php" />
         <option value="$PROJECT_DIR$/js/profil.js" />
         <option value="$PROJECT_DIR$/php/deconnexion.php" />
-        <option value="$PROJECT_DIR$/php/profil.php" />
-        <option value="$PROJECT_DIR$/php/connexion.php" />
         <option value="$PROJECT_DIR$/php/inscription.php" />
         <option value="$PROJECT_DIR$/php/questioncreator.php" />
         <option value="$PROJECT_DIR$/php/quizcreator.php" />
+        <option value="$PROJECT_DIR$/php/profil.php" />
+        <option value="$PROJECT_DIR$/css/profil.css" />
+        <option value="$PROJECT_DIR$/php/connexion.php" />
+        <option value="$PROJECT_DIR$/php/quizaffiche.php" />
+        <option value="$PROJECT_DIR$/php/sendScore.php" />
+        <option value="$PROJECT_DIR$/js/quizaffiche.js" />
       </list>
     </option>
   </component>
@@ -211,6 +247,11 @@
             <path>
               <item name="www" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="www" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="php" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -291,7 +332,7 @@
       <workItem from="1539804119970" duration="510000" />
       <workItem from="1539804653989" duration="103000" />
       <workItem from="1539804780656" duration="343000" />
-      <workItem from="1539843252625" duration="20572000" />
+      <workItem from="1539843252625" duration="32173000" />
     </task>
     <task id="LOCAL-00001" summary="commit phpstorm">
       <created>1539843658068</created>
@@ -304,7 +345,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25471000" />
+    <option name="totallyTimeSpent" value="37072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -325,7 +366,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32867134" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -365,6 +406,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit phpstorm" />
     <option name="LAST_COMMIT_MESSAGE" value="commit phpstorm" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/php/quizaffiche.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html" />
@@ -406,36 +457,10 @@
     <entry file="file://$PROJECT_DIR$/js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/supprimerquiz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/profil.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/deconnexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/questioncreator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="13" selection-start-line="1" selection-end-line="1" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -446,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/profil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/quizcreator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -460,13 +478,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -481,10 +492,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/questioncreator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="132" column="7" selection-start-line="6" selection-start-column="2" selection-end-line="132" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/profil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/profil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="59" column="66" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
+        <state relative-caret-position="-528">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -495,6 +527,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/quizaffiche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/supprimerquiz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="18" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/sendScore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="112" selection-start-line="6" selection-start-column="112" selection-end-line="6" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/quizaffiche.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

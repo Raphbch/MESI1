@@ -2,6 +2,15 @@ h1{
     text-align: center;
 }
 
+tbody a{
+    color: white;
+    text-decoration: none;
+}
+
+tbody a:link{
+    color: white;
+    text-decoration: none;
+}
 .iconSearch{
     max-width: 20px;
     max-height: 20px;
@@ -90,4 +99,3 @@ tr, td{
 #jumbotron{
     background: rgba(30, 144, 255, 0.3);
 }
-
