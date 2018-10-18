@@ -107,11 +107,8 @@ if ($privilege == "Admin") {
             <form action='#'>
                 <td id=\"barresearch\" colspan=\"3\">
                 <div class=\"input-group\">
-                
-                    <span class=\"input-group-addon\"><img src=\"../img/search.png\" alt=\"Recherche\" class=\"iconSearch\"></span>
-                    <input class=\"form-control\" type=\"text\" id=\"Recherche\" name=\"Recherche\" placeholder=\"Rechercher un quiz\"/> 
-                    <input type='submit' hidden>  
-                
+                    <span class=\"input-group-addon\"><input type=\"image\" class=\"iconSearch\" src=\"../img/search.png\"/></span>
+                    <input class=\"form-control\" type=\"text\" id=\"Recherche\" name=\"Recherche\" placeholder=\"Rechercher un quiz\"/>
                 </div>
             </td>
             </form> 
@@ -139,7 +136,7 @@ if ($privilege == "Admin") {
                                                     
                             <div class=\"btn-group\">
                             <div class=\"btn-group-vertical\">
-                            <button type=\"button\" class=\"btn btn-primary\">" . $titlequizresearch[$i] . "</button>
+                            <a href=\"quizaffiche.php?id=".$idquizresearch[$i]."\"><button type=\"button\" class=\"btn btn-primary\">" . $titlequizresearch[$i] . "</button></a>
                             <button href=\"#\" class='Refuser btn btn-danger' id='Refuser_" . $idquizresearch[$i] . "' value='" . $idquizresearch[$i] . "'>Supprimer</button>
                             </div>
                         </div>";

@@ -25,6 +25,9 @@ if(!isset($_SESSION['idutilisateur']))
     <form class="form-horizontal" method="post" action="quizaffiche.php?id=<?php echo $_GET['id']; ?>" >
         <div class="panel-inline panel-default" id="panel-question">
             <div class="panel-heading">
+                <a href="profil.php" class="btn btn-info btn-sm">
+                    <span class="glyphicon glyphicon-home"></span> Profil
+                </a>
                 <h1>
                     <?php
                     $bdd = new mysqli ("localhost", "root", "", "quizeco");

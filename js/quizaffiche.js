@@ -3,6 +3,7 @@ $(document).ready(function () {
         var Score = 0;
         for (var i = 1; i <= $("#nbquestion").val(); i++) {
             $("input[type=radio]").attr('disabled', true);
+            $("input[type=button]").hide();
             var rate_value;
             var ReponseTrue = "#ReponseTrue" + i;
             var ReponseSelected = "#reponse" + i + "1";
@@ -41,7 +42,6 @@ $(document).ready(function () {
             else {
                 $(LabelSelected).addClass("text-danger");
                 $(LabelTrue).addClass("text-success");
-
             }
         }
                 var idquizselected = $("#idquiz").val();
@@ -50,7 +50,9 @@ $(document).ready(function () {
                     url: "sendScore.php",
                     data: { idquiz: idquizselected, score: Score }
                 }).done(function() {
-                    $("#resultaffiche").html("Vous avez fait un score de : " +Score);
+                    $("#resultaffiche").html("<h2 class='text-center'>Vous avez fait un score de : " +Score+" sur "+$("#nbquestion").val()+"</h2>" +
+                        "<br>" +
+                        "<a href='profil.php' class='btn btn-info btn-block'><h4 class='text-center'>Retour au profil</h4></a>");
 
                 });
     });
