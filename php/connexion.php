@@ -54,7 +54,7 @@
                                 session_start();
                                 $_SESSION['idutilisateur'] = $IdUser;
                                 $_SESSION['pseudo'] = $Pseudo;
-                                header('Location: testprofil.php');
+                                header('Location: profil.php');
                             }
                             else {
                                 echo("<div class='text-danger' style='text-align:center;'>Identifiant ou Mot de Passe incorrect</a></div>");          
