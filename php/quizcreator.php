@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['idutilisateur']))
+{
+    header('location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +18,7 @@
     <form method="post" action="quizcreator.php" >
         <div class="panel panel-default">
             <div class="panel-heading">
-                <a href="../index.php" class="btn btn-info btn-sm">
+                <a href="../profil.php" class="btn btn-info btn-sm">
                     <span class="glyphicon glyphicon-home"></span> Accueil
                 </a>
                 <h1>Quiz Creator !</h1>
@@ -32,7 +39,6 @@
     <?php
     if(isset($_POST['Suivant']))
     {
-        session_start();
         $date = date("Y-m-d H:i:s");
         $Quizname = addslashes($_POST['Quizname']);
         $idQuiz;

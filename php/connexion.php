@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['idutilisateur']))
+{
+    header('location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -51,7 +58,6 @@
                         else
                         {
                             if (password_verify($Mdp, $MdpHash)) {
-                                session_start();
                                 $_SESSION['idutilisateur'] = $IdUser;
                                 $_SESSION['pseudo'] = $Pseudo;
                                 header('Location: profil.php');

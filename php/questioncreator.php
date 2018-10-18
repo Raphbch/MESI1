@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['idutilisateur']))
+{
+    header('location: ../index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,14 +21,10 @@
     <form class="form-horizontal" method="post" action="questioncreator.php" >
         <div class="panel-inline panel-default" id="panel-question">
             <div class="panel-heading">
-                <a href="../index.php" class="btn btn-info btn-sm">
-                    <span class="glyphicon glyphicon-home"></span> Accueil
-                </a>
                 <h1>Question Creator !</h1>
             </div>
 
             <?php
-            session_start();
             $QuestionCreate = false;
             if(isset($_POST['Valider']))
             {
@@ -70,7 +74,7 @@
                     }
                     if ($checkOK == true)
                     {
-                        echo("<div class='text-success' style='text-align:center;'>Questionnaire correctement créé ! <br> <a href='../index.php'>Retour à l'accueil</a></div>");
+                        echo("<div class='text-success' style='text-align:center;'>Questionnaire correctement créé ! <br> <a href='profil.php'>Retour à l'accueil</a></div>");
                         $QuestionCreate = true;
                     }
                     else
