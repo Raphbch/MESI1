@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73e4c6cc-9715-4226-b514-fefed2e1842e" name="Default Changelist" comment="commit phpstorm2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/quizaffiche.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/quizaffiche.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/quizaffiche.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/quizaffiche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +42,7 @@
           <entry key="dummy" value="7" />
           <entry key="html" value="23" />
           <entry key="js" value="1472" />
-          <entry key="php" value="4013" />
+          <entry key="php" value="4020" />
           <entry key="txt" value="18" />
         </counts>
       </usages-collector>
@@ -66,7 +63,7 @@
           <entry key="CSS" value="129" />
           <entry key="HTML" value="81" />
           <entry key="JavaScript" value="1471" />
-          <entry key="PHP" value="3956" />
+          <entry key="PHP" value="3963" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
@@ -76,9 +73,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -113,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/profil.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -158,7 +159,6 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php/questioncreatorOk.php" />
         <option value="$PROJECT_DIR$/php/supprimerquiz.php" />
         <option value="$PROJECT_DIR$/php/validatequiz.php" />
@@ -173,6 +173,7 @@
         <option value="$PROJECT_DIR$/php/quizaffiche.php" />
         <option value="$PROJECT_DIR$/js/quizaffiche.js" />
         <option value="$PROJECT_DIR$/php/profil.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -343,7 +344,7 @@
       <workItem from="1539804119970" duration="510000" />
       <workItem from="1539804653989" duration="103000" />
       <workItem from="1539804780656" duration="343000" />
-      <workItem from="1539843252625" duration="33965000" />
+      <workItem from="1539843252625" duration="34574000" />
     </task>
     <task id="LOCAL-00001" summary="commit phpstorm">
       <created>1539843658068</created>
@@ -356,7 +357,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38864000" />
+    <option name="totallyTimeSpent" value="39473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -525,9 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/supprimerquiz.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -572,6 +570,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="138" column="176" selection-start-line="138" selection-start-column="176" selection-end-line="138" selection-end-column="176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
         </state>
       </provider>
     </entry>
