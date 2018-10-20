@@ -1,101 +1,103 @@
-h1{
-    text-align: center;
+/*************************************************************/
+body{
+    height: 100vh;
 }
 
-tbody a{
-    color: white;
-    text-decoration: none;
+#top2, #top1{
+    height: 10%;
+    background: #dff0d8;
+    margin-bottom: 1%;
+    border-bottom: 1px solid #d2d5cc;
 }
 
-tbody a:link{
-    color: white;
-    text-decoration: none;
+#leftpanel{
+    padding: 0 0 0 0;
+    margin: 0 -5px 0 5px;
 }
-.iconSearch{
-    max-width: 20px;
-    max-height: 20px;
+#rightpanel{
+    height: 80%;
 }
-
-#Recherche{
-
-    width: 100%;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-
+#panelsearch2{
+    height: 8%;
 }
 
-table{
-    width: 100%;
-    margin: auto;
-    border-collapse: collapse;
+#tendances1, #resultat2 {
+    margin: 0;
+    padding: 0;
+    height: 46%;
 }
 
-tr{
-    border: 1px solid black;
-
+#resultat1, #validation1{
+    margin: 0 0 0 1%;
+    width: 98%;
+    padding: 0;
+    height: 39%;
 }
 
-.resultat{
-    height: 37vh;
-    overflow: scroll;
-    width: 97vw;
-
-
-}
-
-.tendances{
-    height: 37vh;
-    background: rgba(30, 144, 255, 0.3);
-
-
-}
-
-#barresearch{
-
-    width: 1008px;
-    background: rgba(30, 144, 255, 0.3);
-
-
-}
-
-#button
-{
-    display: inline-block;
-}
-
-.resultat{
+#tendances1affiche, #resultat2affiche,#resultat1affiche, #validation1affiche {
+    height: 85%;
     overflow-x: scroll;
-    white-space: nowrap;
-    vertical-align: center;
+    text-overflow: ellipsis;
+    white-space:nowrap;
 }
 
-.resultats
+#resultat1affiche, #validation1affiche{
+    height: 86% !important;
+}
+
+#tendances1{
+    margin-top: 1%;
+}
+
+#validation1{
+    margin-bottom: 1%;
+}
+
+#resultat1{
+    margin-top: 1%;
+}
+
+#imgprofil{
+    width: 100%;
+    height: auto;
+}
+
+#nbquizcomplete{
+    padding-top: 50px;
+}
+
+.btn-modif{
+    margin-left: 10px;
+    height: 70%;
+}
+
+.button1quizadmin{
+    font-size: 130%;
+    height: 15vh;
+}
+
+.Valider, .Refuser{
+    min-width: 80% !important;
+    max-width: 90% !important;
+    margin: auto !important;
+    font-size: 80%;
+}
+
+::-webkit-scrollbar-track
 {
-    background: rgba(30, 144, 255, 0.3);
-
+    -webkit-box-shadow: inset 0 0 6px rgba(233, 233, 233, 0.84);
+    background-color: #F5F5F5;
+}
+.force-overflow {
+    min-width: 450px;
+}
+::-webkit-scrollbar {
+    height: 12px;
+    background-color: #F5F5F5;
 }
 
-tr, td{
-    border: 2px solid black;
-}
-
-.tendance{
-    overflow-x: scroll;
-    white-space: nowrap;
-    vertical-align: center;
-}
-
-.tendance{
-    height: 37vh;
-    overflow: scroll;
-    width: 97vw;
-}
-
-.container{
-    display: flex;
-    justify-content: space-around;
-}
-
-#jumbotron{
-    background: rgba(30, 144, 255, 0.3);
+::-webkit-scrollbar-thumb
+{
+    background-color: #3c763d;
+    border-radius: 8px;
 }
