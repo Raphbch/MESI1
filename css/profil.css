@@ -1,103 +1,105 @@
 /*************************************************************/
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 
-#top2, #top1{
-    height: 10%;
-    background: #dff0d8;
-    margin-bottom: 1%;
-    border-bottom: 1px solid #d2d5cc;
+#top2, #top1 {
+  height: 10%;
+  background: #dff0d8;
+  margin-bottom: 1%;
+  border-bottom: 1px solid #d2d5cc;
 }
 
-#leftpanel{
-    padding: 0 0 0 0;
-    margin: 0 -5px 0 5px;
+#leftpanel {
+  padding: 0 0 0 0;
+  margin: 0 -5px 0 5px;
 }
-#rightpanel{
-    height: 80%;
+
+#rightpanel {
+  height: 80%;
 }
-#panelsearch2{
-    height: 8%;
+
+#panelsearch2 {
+  height: 8%;
 }
 
 #tendances1, #resultat2 {
-    margin: 0;
-    padding: 0;
-    height: 46%;
+  margin: 0;
+  padding: 0;
+  height: 46%;
 }
 
-#resultat1, #validation1{
-    margin: 0 0 0 1%;
-    width: 98%;
-    padding: 0;
-    height: 39%;
+#resultat1, #validation1 {
+  margin: 0 0 0 1%;
+  width: 98%;
+  padding: 0;
+  height: 39%;
 }
 
-#tendances1affiche, #resultat2affiche,#resultat1affiche, #validation1affiche {
-    height: 85%;
-    overflow-x: scroll;
-    text-overflow: ellipsis;
-    white-space:nowrap;
+#tendances1affiche, #resultat2affiche, #resultat1affiche, #validation1affiche {
+  height: 85%;
+  overflow-x: scroll;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-#resultat1affiche, #validation1affiche{
-    height: 86% !important;
+#resultat1affiche, #validation1affiche {
+  height: 86% !important;
 }
 
-#tendances1{
-    margin-top: 1%;
+#tendances1 {
+  margin-top: 1%;
 }
 
-#validation1{
-    margin-bottom: 1%;
+#validation1 {
+  margin-bottom: 1%;
 }
 
-#resultat1{
-    margin-top: 1%;
+#resultat1 {
+  margin-top: 1%;
 }
 
-#imgprofil{
-    width: 100%;
-    height: auto;
+#imgprofil {
+  width: 100%;
+  height: auto;
 }
 
-#nbquizcomplete{
-    padding-top: 50px;
+#nbquizcomplete {
+  padding-top: 50px;
 }
 
-.btn-modif{
-    margin-left: 10px;
-    height: 70%;
+.btn-modif {
+  margin-left: 10px;
+  height: 70%;
 }
 
-.button1quizadmin{
-    font-size: 130%;
-    height: 15vh;
+.button1quizadmin {
+  font-size: 130%;
+  height: 15vh;
 }
 
-.Valider, .Refuser{
-    min-width: 80% !important;
-    max-width: 90% !important;
-    margin: auto !important;
-    font-size: 80%;
+.Valider, .Refuser {
+  min-width: 80% !important;
+  max-width: 90% !important;
+  margin: auto !important;
+  font-size: 80%;
 }
 
-::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px rgba(233, 233, 233, 0.84);
-    background-color: #F5F5F5;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(233, 233, 233, 0.84);
+  background-color: #F5F5F5;
 }
+
 .force-overflow {
-    min-width: 450px;
-}
-::-webkit-scrollbar {
-    height: 12px;
-    background-color: #F5F5F5;
+  min-width: 450px;
 }
 
-::-webkit-scrollbar-thumb
-{
-    background-color: #3c763d;
-    border-radius: 8px;
+::-webkit-scrollbar {
+  height: 12px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3c763d;
+  border-radius: 8px;
 }
