@@ -50,9 +50,38 @@ $(document).ready(function() {
       }
     }).done(function() {
       $("#resultaffiche").html("<h2 class='text-center'>Vous avez fait un score de : " + Score + " sur " + $("#nbquestion").val() + "</h2>" +
+      "<div id='buttonvote' class='text-center'><span  id='like' class='btn btn-success glyphicon glyphicon-thumbs-up'></span> "+
+      "<span id='dislike' class='btn btn-danger glyphicon glyphicon-thumbs-down'></span></div>"+
         "<br>" +
-        "<a href='profil.php' class='btn btn-info btn-block'><h4 class='text-center'>Retour au profil</h4></a>");
+        "<a href='profil.php' ' class='btn btn-info btn-block'><h4 class='text-center'>Retour au profil</h4></a>");
+        $('#like').click(function() {
+          console.log("test");
 
-    });
+          $.ajax({
+            type: "POST",
+            url: "vote.php",
+            data: {
+              idquiz: idquizselected,
+              etat: 'like'
+            }
+          }).done(function() {
+            $('#buttonvote').html('');
+          });
+        });
+        $('#dislike').click(function() {
+          $.ajax({
+            type: "POST",
+            url: "vote.php",
+            data: {
+              idquiz: idquizselected,
+              etat: 'dislike'
+            }
+          }).done(function() {
+            $('#buttonvote').html('');
+          });
+        });
   });
+
+
+});
 });

@@ -17,8 +17,8 @@ mysqli_set_charset($bdd, "utf8");
     <title>Document</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/inscription.css">
-
 </head>
+
 <body>
 
     <div class="container">

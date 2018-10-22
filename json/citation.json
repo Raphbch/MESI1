@@ -1,0 +1,80 @@
+{
+    "nom" : "citations",
+    
+    "liste" : [
+        {
+            "citation" : "L'environnement, c'est tout ce qui n'est pas moi!",
+            "auteur" : "<br>Albert Einstein"
+            
+        },     
+        {
+            "citation" : "Message pour les écolos canadiens, sauvez un arbre, manger un castor!",
+            "auteur" : "<br>Coluche"
+            
+        },
+        {
+            "citation" : "Tous les ecologistes sont daltoniens, ils voient vert partout!",
+            "auteur" : "<br>Raymond Devos"
+        },
+        {
+            "citation" :"Les forêts précèdent les hommes, les déserts les suivent.",
+            "auteur" :"<br>Chateaubriand"
+        },
+        {
+            "citation" :" Parler de l’homme dans la nature revient presque aujourd’hui à parler de l’homme contre la nature.",
+            "auteur" :"<br>Théodore Monod"
+        },
+        {
+            "citation" :"Les primevères et les paysages ont un défaut grave : ils sont gratuits. L'amour de la nature ne fournit de travail à nulle usine.",
+            "auteur" :"<br>Aldous Huxley"
+        },
+        {
+            "citation" :"Celui qui croit qu’une croissance infinie peut continuer indéfiniment dans un monde fini est un fou ou un économiste.",
+            "auteur" :"<br>Kenneth Boulding"
+        },
+        {
+            "citation" :"Un père bilogique est-il forcément écolo?",
+            "auteur" :"<br>Vincent Roca"
+        },
+        {
+            "citation" :"Les écologistes ne s'intéressent pas qu'aux culs des oiseaux et à la chlorophylle!",
+            "auteur" :"<br>Noël Mamère"
+        },
+        {
+            "citation" :"La science a fait de nous des dieux avant de faire de nous des hommes.",
+            "auteur" :"<br>Jean Rostand"
+        },
+        {
+            "citation" :"L'opinion d'un homme peut changer honorablement, pourvu que sa conscience ne change pas.",
+            "auteur" :"<br>Victor Hugo"
+        },
+        {
+            "citation" :"L'homme se doit d'être le gardien de la nature, non son propriétaire.",
+            "auteur" :"<br>Philippe Saint Marc"
+        },
+        {
+            "citation" :"L'écologie est aussi et surtout un problème culturel. Le respect de l'environnement passe par un grand nombre de changements comportementaux.",
+            "auteur" :"<br>Nicolas Hulot"
+        },
+        {
+            "citation" :"La société changera quand la morale et l’éthique investiront notre réflexion.",
+            "auteur" :"<br>Pierre Rhabi"
+        },
+        {
+            "citation" :"L'écologie tend à combler le fossé que l'industrie a creusé entre l'homme et les animaux.",
+            "auteur" :"<br>Emmanuel Berri"
+        },
+        {
+            "citation" :"L’avenir sera vert ou ne le sera pas.",
+            "auteur" :"<br>Bob Brown"
+        },
+        {
+            "citation" :"Chaque goutte d'eau dans l'océan compte!",
+            "auteur" :"<br>Yoko Ono"
+        },
+        {
+            "citation" :"L’eau et l’air, les deux fluides essentiels dont dépend toute la vie, sont devenus des poubelles globales.",
+            "auteur" :"<br>Jacques Yves Cousteau"
+        }
+    ]
+}

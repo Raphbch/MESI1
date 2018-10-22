@@ -144,7 +144,7 @@ if ($privilege == "Admin") {
                             <div class='btn-group'>
                                 <div class='btn-group-vertical'>
                                 <a href='quizaffiche.php?id=" . $idquizresearch[0] . "'><button type='button' class='btn btn-primary'>" . $titlequizresearch[0] . "</button></a>
-                                <button href='#' class='Refuser btn btn-danger' id='Refuser_" . $idquizresearch[0 ] . "' value='" . $idquizresearch[0] . "'>Supprimer</button>
+                                <button href='#' class='Refuser btn btn-danger' id='Refuser_" . $idquizresearch[0] . "' value='" . $idquizresearch[0] . "'>Supprimer</button>
                                 </div>
                             </div>
                         ";
@@ -170,7 +170,7 @@ else {
         <div class='panel-heading'></div>
         <div class='panel-body'>
           <div class='col-sm-2 col-md-5'>
-            <img id='imgprofil' class='img-rounded' src='../img/profil/niveau1.jpg' alt='Photo'>
+            <img id='imgprofil' class='img-rounded' src='../".icones($quizcomplete)/*Title generator*/."' alt='Photo'>
           </div>
           <div class='col-sm-2 col-md-7 text-center'>
             <br>
@@ -230,9 +230,9 @@ else {
             }
             $idquizresearch = '';
             $titlequizresearch = '';
-            $nbpositif = '0';
-            $nbnegatif = '0';
-            $result = $bdd->query("SELECT idquiz, titre, nbpositif, nbnegatif FROM quiz WHERE UPPER(titre) LIKE UPPER('%" . $research. "%') ORDER BY DateOn DESC");
+            $nbpositif = '';
+            $nbnegatif = '';
+            $result = $bdd->query("SELECT idquiz, titre, nbpositif, nbnegatif FROM quiz WHERE Valider ='1' AND UPPER(titre) LIKE UPPER('%" . $research. "%') ORDER BY DateOn DESC");
             if ($result->num_rows > 0) {
                 $i = 0;
                 while ($row = $result->fetch_assoc()) {
@@ -246,7 +246,7 @@ else {
             if ($idquizresearch != '') {
                 for ($i = 0; $i < sizeof($idquizresearch); $i++) {
                     echo "
-                        <a href='quizaffiche.php?id=" . $idquizresearch[$i] . "'><button type='button' class='btn btn-success btn-modif'>".$titlequizresearch[$i]." <br><br><span class=\"glyphicon glyphicon-ok\"></span> ".$nbpositif[$i]." &nbsp;&nbsp;&nbsp; <span class=\"glyphicon glyphicon-remove\"></span> ".$nbnegatif[$i]."</button></a>
+                        <a href='quizaffiche.php?id=" . $idquizresearch[$i] . "'><button type='button' class='btn btn-success btn-modif'>".$titlequizresearch[$i]." <br><br><span class=\"	glyphicon glyphicon-thumbs-up\"> ".$nbpositif[$i]."</span>  &nbsp;&nbsp;&nbsp; <span class=\"	glyphicon glyphicon-thumbs-down\"> ".$nbnegatif[$i]."</span> </button></a>
                     ";
                 }
             }
@@ -262,14 +262,15 @@ else {
                     <div id='tendances1affiche' class='panel-body'>
                     <br>
                     ";
+
                         $idquiztendance = '';
                         $titlequiztendance = '';
-                        $nbpositif = '0';
-                        $nbnegatif = '0';
-                        $result = $bdd->query('SELECT idquiz, titre, nbpositif - nbnegatif, nbpositif, nbnegatif FROM quiz ORDER BY 3 DESC');
-                        if ($result->num_rows > 0) {
+                        $nbpositif = '';
+                        $nbnegatif = '';
+                        $result2 = $bdd->query("SELECT idquiz, titre, nbpositif - nbnegatif, nbpositif, nbnegatif FROM quiz WHERE Valider ='1' ORDER BY 3 DESC");
+                        if ($result2->num_rows > 0) {
                             $i = 0;
-                            while ($row = $result->fetch_assoc()) {
+                            while ($row = $result2->fetch_assoc()) {
                                 $idquiztendance[$i] = $row['idquiz'];
                                 $titlequiztendance[$i] = $row['titre'];
                                 $nbpositif[$i] = $row['nbpositif'];
@@ -280,7 +281,7 @@ else {
                         if ($idquizresearch != '') {
                             for ($i = 0; $i < sizeof($idquiztendance); $i++) {
                                 echo "
-                                        <a href='quizaffiche.php?id=" . $idquiztendance[$i] . "'><button type='button' class='btn btn-success btn-modif'>".$titlequiztendance[$i]." <br><br><span class=\"glyphicon glyphicon-ok\"></span> ".$nbpositif[$i]." &nbsp;&nbsp;&nbsp; <span class=\"glyphicon glyphicon-remove\"></span> ".$nbnegatif[$i]."</button></a>
+                                        <a href='quizaffiche.php?id=" . $idquiztendance[$i] . "'><button type='button' class='btn btn-success btn-modif'>".$titlequiztendance[$i]." <br><br><span class=\"glyphicon glyphicon-thumbs-up\"> ".$nbpositif[$i]."</b></span>  &nbsp;&nbsp;&nbsp; <span class=\"glyphicon glyphicon-thumbs-down\"> ".$nbnegatif[$i]."</span> </button></a>
                                 ";
                             }
                         }
@@ -295,28 +296,44 @@ else {
 }
 
 
-/*============================Fonction titre===================================*/
-function title($nb){
-    switch (true){
-        case $nb == 0:
-            return "Soldat de l'environnement ";
-            break;
-        case $nb < 10:
-            return "Caporal de l'environnement ";
-            break;
-        case $nb < 20:
-            return "Caporal-chef de l'environnement ";
-            break;
-        case $nb < 50:
-            return "Sergent de l'environnement ";
-            break;
-        case $nb < 100:
-            return "Sergent-chef de l'environnement ";
-            break;
-        default:
-            return"testdefault";
-            break;
+/*============================Fonction image===================================*/
+
+
+function icones($nb){
+  $iconesjson = file_get_contents("../json/icones.json");
+
+  $iconesjson = json_decode($iconesjson);
+    $i=1;
+    $j=0;
+    while($i <= $nb )
+    {
+      $i = intval($i * 1.3)+2;
+      $j++;
     }
+    if ($j >= sizeof($iconesjson->{'liste'}) ) {
+      $j = sizeof($iconesjson->{'liste'})-1;
+    }
+    return $iconesjson->{'liste'}[$j];
+}
+
+
+/*============================Fonction titre===================================*/
+
+function title($nb){
+  $gradejson = file_get_contents("../json/grades.json");
+
+  $gradejson = json_decode($gradejson);
+    $i=1;
+    $j=0;
+    while($i <= $nb )
+    {
+      $i = intval($i * 4)+2;
+      $j++;
+    }
+    if ($j >= sizeof($gradejson->{'liste'}) ) {
+      $j = sizeof($gradejson->{'liste'})-1;
+    }
+    return $gradejson->{'liste'}[$j];
 }
 /*=============================================================================*/
 ?>

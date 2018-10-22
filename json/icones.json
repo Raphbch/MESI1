@@ -1,0 +1,14 @@
+{
+    "nom" : "icone",
+    
+    "liste" : [
+            "img/panda.jpg",
+            "img/lemur.jpg",
+            "img/aigle.jpg",
+            "img/leopard.jpg",
+            "img/loutre.jpg",
+            "img/nasique.jpg",
+            "img/okapi.jpg",
+            "img/gorille.jpg"
+    ]
+}

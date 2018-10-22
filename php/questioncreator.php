@@ -74,7 +74,7 @@ if(!isset($_SESSION['idutilisateur']))
                     }
                     if ($checkOK == true)
                     {
-                        echo("<div class='text-success' style='text-align:center;'>Questionnaire correctement créé ! <br> <a href='profil.php'>Retour à l'accueil</a></div>");
+                        echo("<div class='text-success' style='text-align:center;'>Questionnaire correctement créé ! <br> <a href='profil.php'>Retour au profil</a></div>");
                         $QuestionCreate = true;
                     }
                     else

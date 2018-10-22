@@ -1,0 +1,102 @@
+h1{
+    text-align: center;
+}
+
+.iconSearch{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+#Recherche{
+
+    width: 100%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+table{
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+tr{
+    border: 1px solid black;
+
+}
+
+.resultat{
+    height: 37vh;
+    overflow: scroll;
+    width: 97vw;
+
+
+}
+
+.tendances{
+    height: 37vh;
+    background: rgba(30, 144, 255, 0.3);
+
+
+}
+
+#barresearch{
+
+    width: 1008px;
+    background: rgba(30, 144, 255, 0.3);
+
+
+}
+
+#button
+{
+    display: inline-block;
+}
+
+.resultat{
+    overflow-x: scroll;
+    white-space: nowrap;
+    vertical-align: center;
+}
+
+.resultats
+{
+    background: rgba(30, 144, 255, 0.3);
+
+}
+
+tr, td{
+   border: 2px solid black;
+}
+
+.tendance{
+    overflow-x: scroll;
+    white-space: nowrap;
+    vertical-align: center;
+}
+
+.tendance{
+    height: 37vh;
+    overflow: scroll;
+    width: 97vw;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+#jumbotron{
+    background: rgba(30, 144, 255, 0.3);
+}
+
+a:link{
+  color: white;
+  text-decoration: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
