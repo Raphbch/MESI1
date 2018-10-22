@@ -54,8 +54,9 @@ if ($privilege == "Admin") {
     echo "
             <div id='top1'>
             <div class='col-sm-3'>
-                    <h4 class='text-center'><a href='#'>Modifier le profil</a></h4>
-                    <h4 class='text-center'><a href='quizcreator.php'>Créer un quizz</a></h4>
+                    <h6 class='text-center'><a href='modifprofil.php'>Modifier le profil</a></h6>
+                    <h6 class='text-center'><a href='modifierquizselector.php'>Modifier un quiz</a></h6>
+                    <h6 class='text-center'><a href='quizcreator.php'>Créer un quizz</a></h6>
             </div>
             <div class='col-sm-6'>
                  <h1 class='text-center'><strong>Profil Administrateur</strong></h1>
@@ -138,12 +139,12 @@ if ($privilege == "Admin") {
                     }
                 }
                 if ($idquizresearch != "") {
-                    for ($i = 0; $i < sizeof($idquizresearch); $i++) {
+                    for ($i = 0; $i < 12; $i++) {
                         echo "
                             <div class='btn-group'>
                                 <div class='btn-group-vertical'>
-                                <a href='quizaffiche.php?id=" . $idquizresearch[$i] . "'><button type='button' class='btn btn-primary'>" . $titlequizresearch[$i] . "</button></a>
-                                <button href='#' class='Refuser btn btn-danger' id='Refuser_" . $idquizresearch[$i] . "' value='" . $idquizresearch[$i] . "'>Supprimer</button>
+                                <a href='quizaffiche.php?id=" . $idquizresearch[0] . "'><button type='button' class='btn btn-primary'>" . $titlequizresearch[0] . "</button></a>
+                                <button href='#' class='Refuser btn btn-danger' id='Refuser_" . $idquizresearch[0 ] . "' value='" . $idquizresearch[0] . "'>Supprimer</button>
                                 </div>
                             </div>
                         ";
@@ -163,7 +164,7 @@ if ($privilege == "Admin") {
 else {
     echo "
       <div id='top2' class='col-sm-12'>
-          <h1><strong>Profil</strong></h1>
+          <h1 class='text-center'><strong>Profil</strong></h1>
       </div>
       <div id='leftpanel' class='col-sm-12 col-md-3 panel panel-success'>
         <div class='panel-heading'></div>
@@ -177,7 +178,7 @@ else {
             ".$pseudo."
             </strong>
             <br><br>
-            ".title($nbbonnerep);   /*Title generator*/."
+            ".title($nbbonnerep)/*Title generator*/."
           </div>
           <div class='col-sm-4 col-md-12 text-center' id='nbquizcomplete'>
             <br>
@@ -189,7 +190,12 @@ else {
           </div>
           <div class='col-sm-4 col-md-12 text-center'>
             <br>
-            <button type='button' class='btn btn-warning'>Modifier le profil</button>
+            <a href='quizcreator.php'><button type='button' class='btn btn-success'>Créer un quiz</button></a>
+            <a href='modifierquizselector.php'><button type='button' class='btn btn-success'>Modifier un quiz</button></a>
+          </div>
+          <div class='col-sm-4 col-md-12 text-center'>
+            <br>
+            <a href='modifprofil.php'><button type='button' class='btn btn-success'>Modifier le profil</button></a>
             <a href='deconnexion.php'><button type='button' class='btn btn-danger'>Deconnexion</button></a>
           </div>
         </div>

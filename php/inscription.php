@@ -1,3 +1,15 @@
+<?php
+/*========Connection to DB And Start Session===================================*/
+session_start();
+if (!isset($_SESSION['idutilisateur'])) {
+    header('location: ../index.php');
+}
+date_default_timezone_set('UTC');
+$bdd = new mysqli ("localhost", "root", "", "quizeco");
+mysqli_set_charset($bdd, "utf8");
+/*=============================================================================*/
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,10 +17,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/inscription.css">
-    
+
 </head>
 <body>
-    
+
     <div class="container">
         <form method="post" action="inscription.php" >
             <div class="panel panel-default">
@@ -42,28 +54,25 @@
                             /* on test si les deux mdp sont bien identique */
                             if ($password==$repeatpassword)
                             {
-                                // on se connecte à MySQL et on sélectionne la base
-                                $bdd = new mysqli ("localhost","root","","quizeco"); 
                                 $pass_hache = password_hash($password, PASSWORD_DEFAULT);
                                 //On créé la requête
                                 $sql = "INSERT INTO utilisateur(Pseudo,MotDePasse,Email) VALUES ('".$pseudo."','".$pass_hache."','".$email."')";
-                                /* execute et affiche l'erreur mysql si elle se produit */
-                                
+
                                 if ($bdd->query($sql))
                                 {
-                                    echo("<div class='text-success' style='text-align:center;'>Compte correctement créé ! <br> <a href='../index.php'>Retour à l'accueil</a></div>");          
+                                    echo("<div class='text-success' style='text-align:center;'>Compte correctement créé ! <br> <a href='../index.php'>Retour à l'accueil</a></div>");
                                 }
                                 else
                                 {
                                     echo("<div class='text-danger' style='text-align:center;'>Ce Pseudo existe déjà.<br> Veuillez en choisir un autre</div>");
 
                                 }
-                                
+
                             // on ferme la connexion
                             mysqli_close($bdd);
                             }
-                            else 
-                            {                                
+                            else
+                            {
                                 echo("<div class='text-danger' style='text-align:center;'>Les mots de passe ne sont pas identique</div>");
                             }
                     }

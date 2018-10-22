@@ -18,8 +18,8 @@ if(!isset($_SESSION['idutilisateur']))
     <form method="post" action="quizcreator.php" >
         <div class="panel panel-default">
             <div class="panel-heading">
-                <a href="../profil.php" class="btn btn-info btn-sm">
-                    <span class="glyphicon glyphicon-home"></span> Accueil
+                <a href="profil.php" class="btn btn-info btn-sm">
+                    <span class="glyphicon glyphicon-home"></span> Profil
                 </a>
                 <h1>Quiz Creator !</h1>
             </div>
