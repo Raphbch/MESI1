@@ -1,9 +1,6 @@
 <?php
 /*========Connection to DB And Start Session===================================*/
 session_start();
-if (!isset($_SESSION['idutilisateur'])) {
-    header('location: ../index.php');
-}
 date_default_timezone_set('UTC');
 $bdd = new mysqli ("localhost", "root", "", "quizeco");
 mysqli_set_charset($bdd, "utf8");
